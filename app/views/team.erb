@@ -1,3 +1,15 @@
+<h1>Super Hero Teams</h1>
+<div class="team">
+  <h3>Team Name: <%= @team.name %></h3><br>
+  <h4>Team Motto: <%= @team.motto %></h4>
+</div><br>
 
-
-
+<h1>Super Hero Info</h1>
+<% @super_heroes.each_with_index do |hero, index| %>
+  <div class="super_hero">
+    <h2>Super Hero <%= index + 1 %></h2>
+    <p>Hero Name: <%= hero.name %></p><br>
+    <p>Hero Power: <%= hero.power %></p><br>
+    <p>Hero Biography: <%= hero.bio %></p>
+  </div><br>
+<% end %>
